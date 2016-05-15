@@ -10,10 +10,9 @@ class ImgixForCraftVariable
   public function imgixify($image, $transform = null)
   {
 
-    $imgixSourceDomain = 'testeroonie.imgix.net';
+    $imgixSourceDomain = craft()->plugins->getPlugin('imgixForCraft')->getSettings()['imgixSourceUrl'];
 
     $builder = new UrlBuilder($imgixSourceDomain);
-
 
     $imageUrl = $image->url;
 
