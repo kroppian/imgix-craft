@@ -1,0 +1,15 @@
+{% import "_includes/forms" as forms %}
+
+<h2>Imgix Settings</h2>
+
+
+{{ forms.textField({
+  label: "Imgix Source Root URL"|t,
+  id: 'imgixSourceUrl',
+  name: 'imgixSourceUrl',
+  instructions: "Lalala."|t,
+  value: settings.imgixSourceUrl,
+  errors: settings.getErrors('imgixSourceUrl')
+}) }}
+
+
