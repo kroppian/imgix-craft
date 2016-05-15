@@ -1,0 +1,24 @@
+{% import "_includes/forms" as forms %}
+
+<h2>Imgix Settings</h2>
+
+
+{{ forms.textField({
+  label: "Imgix Source Root URL"|t,
+  id: 'imgixSourceUrl',
+  name: 'imgixSourceUrl',
+  instructions: "The root of your Imgix Source that corresponds to the root of your webpage's assets."|t,
+  value: settings.imgixSourceUrl,
+  errors: settings.getErrors('imgixSourceUrl')
+}) }}
+
+{{ forms.textField({
+  label: "Secure URL Token"|t,
+  id: 'secureUrlToken',
+  name: 'secureUrlToken',
+  instructions: "Optional code required for secured sources."|t,
+  value: settings.secureUrlToken,
+  errors: settings.getErrors('secureUrlToken')
+}) }}
+
+
