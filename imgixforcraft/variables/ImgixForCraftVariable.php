@@ -1,4 +1,5 @@
 <?php
+
 namespace Craft;
 
 use Imgix\UrlBuilder;
@@ -6,18 +7,18 @@ use Imgix\UrlBuilder;
 class ImgixForCraftVariable
 {
 
-  public function imgixify($image)
+  public function imgixify($image, $transform = null)
   {
 
     $imgixSourceDomain = 'testeroonie.imgix.net';
 
     $builder = new UrlBuilder($imgixSourceDomain);
 
-    $params = array("w" => 50, "h" => 50);
+    $transform = array("w" => 50, "h" => 50);
 
     $imageUrl = $image->url;
 
-    return $builder->createURL($imageUrl, $params);
+    return $builder->createURL($imageUrl, $transform);
   }
 
 }
