@@ -14,8 +14,6 @@ class ImgixForCraftVariable
 
     $builder = new UrlBuilder($imgixSourceDomain);
 
-    $transform = array("w" => 50, "h" => 50);
-
     $imageUrl = $image->url;
 
     return $builder->createURL($imageUrl, $transform);
