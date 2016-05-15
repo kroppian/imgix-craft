@@ -1,0 +1,8 @@
+# Ignore vim swap files
+*.swp
+*.swo
+*.swn
+
+# Ignore deploy helper script
+deployplugin
+
