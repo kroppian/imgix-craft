@@ -1,6 +1,8 @@
 <?php
 namespace Craft;
 
+require 'vendor/autoload.php';
+
 class ImgixForCraftPlugin extends BasePlugin
 {
     public function getName()
