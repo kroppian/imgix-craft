@@ -1,13 +1,23 @@
 <?php
+
 namespace Craft;
 
-class ImgixForCraftVariable 
+use Imgix\UrlBuilder;
+
+class ImgixForCraftVariable
 {
 
-    public function imgixify($url)
-    {
+  public function imgixify($image, $transform = null)
+  {
 
-      return $url.'?fish=trout';
+    $imgixSourceDomain = 'testeroonie.imgix.net';
 
-    }
+    $builder = new UrlBuilder($imgixSourceDomain);
+
+    $imageUrl = $image->url;
+
+    return $builder->createURL($imageUrl, $transform);
+  }
+
 }
+

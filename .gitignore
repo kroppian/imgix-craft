@@ -6,3 +6,7 @@
 # Ignore deploy helper script
 deployplugin
 
+vendor 
+composer.phar
+
+
