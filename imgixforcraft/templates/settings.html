@@ -12,4 +12,13 @@
   errors: settings.getErrors('imgixSourceUrl')
 }) }}
 
+{{ forms.textField({
+  label: "Secure URL Token"|t,
+  id: 'secureUrlToken',
+  name: 'secureUrlToken',
+  instructions: "Lalala."|t,
+  value: settings.secureUrlToken,
+  errors: settings.getErrors('secureUrlToken')
+}) }}
+
 

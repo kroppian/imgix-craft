@@ -7,6 +7,7 @@ class ImgixForCraft_SettingsModel extends BaseModel
 	{
         return array(
             'imgixSourceUrl' => array(AttributeType::String, 'required' => true),
+            'secureUrlToken' => array(AttributeType::String, 'required' => false),
         );
 	}
 }
